@@ -4,11 +4,7 @@ import * as utils from "./utils.js";
 export class Canvas {
     constructor(elm) {
         this.elm = elm;
-        this._ctx = elm.getContext("2d");
         this._layers = [];
-
-        if (!(this._ctx instanceof CanvasRenderingContext2D)) alert("Canvas API unavailable");
-        this.render();
     }
     bringForward(layer) {
         for (var i = 0, len = this._layers.length; i < len; i++) {
@@ -45,9 +41,9 @@ export class Canvas {
         }
         return false;
     }
-    render() {
+    render(p) {
         for (var i = 0, len = this._layers.length; i < len; i++) {
-            this._layers[i].render(this._ctx);
+            this._layers[i].render(p);
         }
     }
 }

@@ -48,7 +48,9 @@ export class Layer {
     intersections(x, y) {
 
     }
-    render(ctx) {
-
+    render(p) {
+        for (var i = 0, len = this._tokens.length; i < len; i++) {
+            this._tokens[i].render(p);
+        }
     }
 }

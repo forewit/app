@@ -17,7 +17,7 @@ export class Sprite {
         this.frame_y = 0;
     }
 
-    render(ctx) {
-       ctx.drawImage(this.URL)
+    render(p) {
+        // draw sprite
     }
 }

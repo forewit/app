@@ -50,17 +50,23 @@ pre {
     line-height: 23px;
 }
 
+#uiCanvas canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+  
+#drawingCanvas canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 #fps {
     position: fixed;
     display: inline-block;
     bottom: 0;
     right: 0;
-}
-
-#canvas {
-    background: teal;
-    width: 100%;
-    height: 100%;
 }
 
 #toolbar-wrapper {
@@ -100,20 +106,6 @@ pre {
     border-radius: 5px;
     box-shadow: 4px 3px 9px 0px rgba(0,0,0, 0.3);
 }
-
-#uiCanvas canvas {
-    z-index: 888;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  #drawingCanvas canvas {
-    z-index: 999;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
 
 /* TODO: add @media for smaller screens.
 This should also update the HTML merge the
